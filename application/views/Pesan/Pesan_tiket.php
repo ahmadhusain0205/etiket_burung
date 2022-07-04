@@ -424,35 +424,36 @@
           var kelas = $('#kelas').val();
           var burung = $('#burung').val();
           var nomor_kursi = $('[name="nomor_kursi"]').val();
-          if (panitia == '') {
+          console.log(panitia)
+          if (panitia == '' || panitia == null) {
                Swal.fire({
-                    icon: 'danger',
+                    icon: 'error',
                     title: 'PANITIA',
                     text: 'Tidak boleh kosong !',
                });
           }
           if (kelas == '') {
                Swal.fire({
-                    icon: 'danger',
+                    icon: 'error',
                     title: 'KELAS',
                     text: 'Tidak boleh kosong !',
                });
           }
           if (burung == '') {
                Swal.fire({
-                    icon: 'danger',
+                    icon: 'error',
                     title: 'BURUNG',
                     text: 'Tidak boleh kosong !',
                });
           }
           if (nomor_kursi == '' || nomor_kursi == 0 || nomor_kursi == null) {
                Swal.fire({
-                    icon: 'danger',
+                    icon: 'error',
                     title: 'GANTANGAN',
                     text: 'Tidak boleh kosong !',
                });
           }
-          if (panitia != '' || kelas != '' || burung != '' || nomor_kursi != '' || nomor_kursi != 0 || nomor_kursi != null) {
+          if (panitia != '' && kelas != '' && burung != '' && nomor_kursi != '' && nomor_kursi != 0 && nomor_kursi != null) {
                // console.log($('#form_pesan').serialize())
                $.ajax({
                     // url: "<?= site_url('Pesan/pesan_sekarang/?panitia=') ?>" + panitia + '&kelas=' + kelas + '&burung=' + burung + '&nomor_kursi=' + nomor_kursi,
@@ -477,7 +478,7 @@
                               });
                          } else {
                               Swal.fire({
-                                   icon: 'danger',
+                                   icon: 'error',
                                    title: 'PEMESANAN',
                                    text: 'Gagal dilakukan !',
                               });
@@ -486,7 +487,7 @@
                });
           } else {
                Swal.fire({
-                    icon: 'danger',
+                    icon: 'error',
                     title: 'PEMESANAN',
                     text: 'Gagal Dilakukan !',
                }).then((value) => {
