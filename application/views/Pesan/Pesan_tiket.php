@@ -225,10 +225,6 @@
 </script>
 
 <script>
-     // $('#gantangan_60').hide();
-     // $('#gantangan_32').hide();
-     // $('#gantangan_24').hide();
-
      <?php for ($i = 0; $i < count(array_keys($nomor_kursi_60)); $i++) { ?>
           $('#gantangan_60_<?php echo array_keys($nomor_kursi_60)[$i]; ?>').hide();
      <?php } ?>
@@ -350,9 +346,6 @@
                          <?php for ($i = 0; $i < count(array_keys($nomor_kursi_24)); $i++) { ?>
                               $('#gantangan_24_<?php echo array_keys($nomor_kursi_24)[$i]; ?>').hide();
                          <?php } ?>
-                         // $('#gantangan_60').show();
-                         // $('#gantangan_32').hide();
-                         // $('#gantangan_24').hide();
                     } else if (data.jum_gantangan == 32) {
                          <?php for ($i = 0; $i < count(array_keys($nomor_kursi_32)); $i++) { ?>
                               var name = '<?php echo array_keys($nomor_kursi_32)[$i]; ?>';
@@ -370,9 +363,6 @@
                          <?php for ($i = 0; $i < count(array_keys($nomor_kursi_24)); $i++) { ?>
                               $('#gantangan_24_<?php echo array_keys($nomor_kursi_24)[$i]; ?>').hide();
                          <?php } ?>
-                         // $('#gantangan_32').show();
-                         // $('#gantangan_60').hide();
-                         // $('#gantangan_24').hide();
                     } else if (data.jum_gantangan == 24) {
                          <?php for ($i = 0; $i < count(array_keys($nomor_kursi_24)); $i++) { ?>
                               var name = '<?php echo array_keys($nomor_kursi_24)[$i]; ?>';
@@ -390,9 +380,6 @@
                          <?php for ($i = 0; $i < count(array_keys($nomor_kursi_32)); $i++) { ?>
                               $('#gantangan_32_<?php echo array_keys($nomor_kursi_32)[$i]; ?>').hide();
                          <?php } ?>
-                         // $('#gantangan_24').show();
-                         // $('#gantangan_60').hide();
-                         // $('#gantangan_32').hide();
                     }
                }
           });
